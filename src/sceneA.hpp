@@ -22,4 +22,10 @@ public:
     void dragEvent(ofDragInfo dragInfo);
     void gotMessage(ofMessage msg);
     
+    float *fft;
+    void getFft(float *fftSmoothed);
+    
+    int nBands;
+    void getNBands(int nBandsToGet);
+    
 };

@@ -45,6 +45,8 @@ void ofApp::update(){
     }
     
     scenes[currentScene]->update();
+    scenes[currentScene]->getFft(fftSmoothed);
+    scenes[currentScene]->getNBands(nBandsToGet);
 
 }
 

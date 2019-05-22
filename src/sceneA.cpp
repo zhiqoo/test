@@ -15,8 +15,8 @@ void sceneA::update(){
 void sceneA::draw(){
     
     ofSetColor(239);
-    for (int i = 0; i < nBandsToGet; i++) {
-        ofDrawRectangle(200 + i*800.0/nBandsToGet, 500, 800.0/nBandsToGet, (fftSmoothed[i])*300);
+    for (int i = 0; i < nBands; i++) {
+        ofDrawRectangle(250 + i*800.0/nBands, ofGetHeight()/2, 800.0/nBands, (fft[i])*300);
     }
     
 }
@@ -74,4 +74,17 @@ void sceneA::gotMessage(ofMessage msg){
 //--------------------------------------------------------------
 void sceneA::dragEvent(ofDragInfo dragInfo){
     
+}
+
+//--------------------------------------------------------------
+void sceneA::getFft(float *fftSmoothed){
+    
+    fft = fftSmoothed;
+    
+}
+
+//--------------------------------------------------------------
+void sceneA::getNBands(int nBandsToGet){
+    
+    nBands = nBandsToGet;
 }

@@ -20,5 +20,7 @@ public:
     virtual void windowResized(int w, int h){};
     virtual void dragEvent(ofDragInfo dragInfo){};
     virtual void gotMessage(ofMessage msg){};
+    virtual void getFft(float *fftSmoothed){};
+    virtual void getNBands(int nBandsToGet){};
     
 };
